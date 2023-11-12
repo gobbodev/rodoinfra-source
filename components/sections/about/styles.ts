@@ -53,12 +53,14 @@ export const About = styled.section`
   @media only screen and (max-width: 1023px) {
     .container {
       padding-left: 25px !important;
+
       .content-text {
         padding-top: 0;
         width: 100%;
         text-align: center;
         
       }
+      
       .box-image {
         display: none;
       }

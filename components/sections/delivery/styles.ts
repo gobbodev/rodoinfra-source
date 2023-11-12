@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const Delivery = styled.section`
-  padding-top: 0!important;
-
   .container {
     display: flex;
     justify-content: center;
@@ -41,13 +39,15 @@ export const Delivery = styled.section`
       }
     }
   }
+  @media only screen and (max-width: 1023px) {
+    padding-top: 0 !important;
+  }
   @media only screen and (max-width: 585px) {
     .sub-container {
       flex-direction: column;
     }
   }
-  @media only screen and (max-width: 767px) {
-  }
+
   @media only screen and (max-width: 660px) {
   }
   @media only screen and (max-width: 550px) {
