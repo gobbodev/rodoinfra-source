@@ -66,6 +66,8 @@ export const Header = styled.header`
           }
         }
       }
+
+
     }
   }
 
@@ -144,6 +146,12 @@ export const Header = styled.header`
             &::after {
               width: 100%;
             }
+          }
+        }
+
+        .wpp, .insta{
+          &::after{
+            display:none;
           }
         }
 
