@@ -35,6 +35,7 @@ interface IProjeto {
   imagemDepois: string;
   url: string;
   id: number;
+  descricao: string;
 }
 
 interface IPageInformations {
@@ -53,7 +54,7 @@ interface IPageInformations {
   ours: IOurs;
   delivery: IDelivery[];
   services: IServices[];
-  projects: IProjects;
+  projects: IProjects[];
   about: IAbout;
   customers: ICustomers;
 }
@@ -80,14 +81,10 @@ interface IServices {
 }
 
 interface IProjects {
-  swiperObjects: IProjectsObject[]
-  description: string;
-}
-
-interface IProjectsObject {
   imageBefore: string;
   imageAfter: string;
-  url: string;
+  // url: string;
+  description: string;
   id: number;
 }
 
@@ -124,7 +121,6 @@ export type {
   IServices,
   IAbout,
   IProjects,
-  IProjectsObject,
   ICustomers,
   ICompany,
   IReview,

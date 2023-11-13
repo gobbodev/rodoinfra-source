@@ -20,7 +20,7 @@ import {
 
 
 export function useFrontSocialLinks(): ISocialItem {
-  const { whatsapp, email, instagram } = useSocialLinks();
+  const { whatsapp, email, instagram, maps} = useSocialLinks();
 
   const socialLinks: ISocialItem = {
     whatsapp: {
@@ -29,12 +29,12 @@ export function useFrontSocialLinks(): ISocialItem {
         icon: IconWhatsInverse({ fill: "#444" })
       },
     maps: {
-      url: "https://maps.app.goo.gl/HdLkVpVEwBRQCLS59",
+      url: maps.url,
       text: "Curitiba - PR",
       icon: PinIcon({ fill: "#444" })
     },
     time: {
-      url: "https://maps.app.goo.gl/HdLkVpVEwBRQCLS59",
+      url: maps.url,
       text: "8h às 18h, de segunda a sexta (exceto feriados)",
       icon: Clock()
     },

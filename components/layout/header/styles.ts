@@ -281,7 +281,7 @@ export const Header = styled.header`
       }
 
       .content-right {
-        width: 38%;
+        width: 15vw;
 
         &:after {
           right: 0;

@@ -6,7 +6,6 @@ export const Projects = styled.section`
 
     .box-swiper {
       position: relative;
-      margin-bottom: 3.13vw;
       display: flex;
       justify-content: center;
       width: 100%;
@@ -43,6 +42,7 @@ export const Projects = styled.section`
         width: 100%;
         gap: 30px;
         justify-content: space-evenly;
+        margin-bottom:40px;
 
         .box-item {
           h5 {
@@ -50,6 +50,9 @@ export const Projects = styled.section`
             color: ${(props) => props.theme.lightBlue};
           }
         }
+      }
+      .swipers-slide{
+
       }
     }
   }
@@ -62,6 +65,7 @@ export const Projects = styled.section`
 
         .item {
           flex-direction: column;
+          margin-bottom:25px;
         }
 
         .btn-responsive-box {

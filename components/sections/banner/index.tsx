@@ -57,7 +57,7 @@ export function Banner() {
         <div className="know-more">
           <Button
             className="font-16-light"
-            href="#ours"
+            href="#oursServices"
             text="Saiba mais"
             svg={{ icon: arrowIconString, size: 1 }}
           />

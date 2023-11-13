@@ -1,8 +1,8 @@
 import { NextImage } from "codiedigital/dist/cjs/components/data";
 
-import { IProjectsObject } from "src/interfaces/generics";
+import { IProjects } from "src/interfaces/generics";
 
-export function CardProject({ item }: { item: IProjectsObject }) {
+export function CardProject({ item }: { item: IProjects }) {
   return (
     <div className="item">
       <div className="box-item">
@@ -18,5 +18,6 @@ export function CardProject({ item }: { item: IProjectsObject }) {
         <h5 className="font-24">DEPOIS</h5>
       </div>
     </div>
+    
   );
 }

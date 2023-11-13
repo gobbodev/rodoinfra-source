@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Customers = styled.section`
-  padding: 5.21vw 0;
+
 
   .container {
     display: flex;

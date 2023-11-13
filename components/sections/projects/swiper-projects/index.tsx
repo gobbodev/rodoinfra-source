@@ -3,13 +3,13 @@ import { renderToString } from "react-dom/server";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Button } from "codiedigital/dist/cjs/components/data";
 
-import { IProjectsObject } from "src/interfaces/generics";
+import { IProjects } from "src/interfaces/generics";
 
 import { configurationSwiper } from "./configuraton-swiper";
 import { CardProject } from "./item/card-project";
 import { LArrowSVG, RArrowSVG } from "public/svg/projects-&-customers";
 
-export function SwipeProjects({ data }: { data: IProjectsObject[] }) {
+export function SwiperProjects({ data }: { data: IProjects[] }) {
   const lBtnIconString = renderToString(<LArrowSVG />);
   const rBtnIconString = renderToString(<RArrowSVG />);
   return (
@@ -20,6 +20,12 @@ export function SwipeProjects({ data }: { data: IProjectsObject[] }) {
             {data.map((item) => (
               <SwiperSlide key={item.id}>
                 <CardProject item={item} />
+                {item.description && (
+                  <div
+                    className="phrase font-16"
+                    dangerouslySetInnerHTML={{ __html: item.description }}
+                  />
+                )}
               </SwiperSlide>
             ))}
           </Swiper>

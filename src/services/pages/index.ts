@@ -36,25 +36,22 @@ export async function getPageData(url: string | string[] | undefined) {
         image: response.imagemSobre,
       },
 
-      projects: {
-        swiperObjects: response.projetos.map((item) => ({
-          imageBefore: item.imagemAntes,
-          imageAfter: item.imagemDepois,
-          url: item.url,
-          id: item.id,
-        })),
-        description: response.descricaoProjetos,
-      },
+      projects: response.projetos.map((item) => ({
+        imageBefore: item.imagemAntes,
+        imageAfter: item.imagemDepois,
+        ...(item.descricao && { description: item.descricao }),
+        id: item.id,
+      })),
 
       customers: {
         companies: response.marcas,
         reviews: response.depoimentos.map((item) => ({
           title: item.titulo,
 
-          ...(item.subtitulo && {subtitle: item.subtitulo}),
+          ...(item.subtitulo && { subtitle: item.subtitulo }),
           description: item.descricao,
-          ...(item.imagem && {image: item.imagem}),
-          ...(item.id) as unknown as object, //mantem o item.id pq em ingles e port é a mema coisa
+          ...(item.imagem && { image: item.imagem }),
+          ...(item.id as unknown as object), //mantem o item.id pq em ingles e port é a mema coisa
         })),
       },
     };
