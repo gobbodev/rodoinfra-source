@@ -51,13 +51,13 @@ export const Header = styled.header`
           gap: 25px;
 
           a {
-            width:30px;
-              height:30px;
+            width: 30px;
+            height: 30px;
             background-color: ${(props) => props.theme.lightBlue};
 
             svg {
-              width:18px;
-              height:18px;
+              width: 18px;
+              height: 18px;
 
               path {
                 fill: #fff;
@@ -301,6 +301,9 @@ export const Header = styled.header`
       }
 
       .content-left {
+        .box-logo {
+          width: 200px;
+        }
         &:after {
           width: 102vw;
         }
@@ -308,5 +311,17 @@ export const Header = styled.header`
     }
   }
   @media only screen and (max-width: 360px) {
+    .container {
+      
+
+      .content-left {
+        .box-logo {
+          width: 190px;
+          right: -5vw;
+        }
+      
+      }
+    
+  }
   }
 `;
