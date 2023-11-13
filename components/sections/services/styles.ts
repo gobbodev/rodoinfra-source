@@ -137,6 +137,8 @@ export const Services = styled.section`
     }
   }
   @media only screen and (max-width: 1280px) {
+    //padding sendo controlado pela section aqui, pois temos 2 containers devido a versao desktop
+
     display: flex;
     gap: 30px;
     padding-right: 20px;
@@ -184,33 +186,58 @@ export const Services = styled.section`
       }
     }
   }
+  @media only screen and (max-width: 1023px) {
+    .custom-container {
+      ul {
+        li {
+          .subtitle {
+            .box-icon {
+              width: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
   @media only screen and (max-width: 767px) {
     flex-direction: column-reverse;
     gap: 0;
+    
     h2 {
       position: absolute;
       display: flex !important;
       top: 30px;
-      color: ${(props) => props.theme.lightBlue};
       left: 50%;
       transform: translateX(-50%);
-    }
+      color: ${(props) => props.theme.lightBlue};
+    } 
     .block {
       .custom-container {
+        padding-top:90px;
         ul {
-          gap: 20px;
+          gap: 35px;
+
           li {
+            
             .subtitle {
               width: 100%;
               gap: 8px;
               margin-bottom: 12px;
-              justify-content: center;
+              justify-content: flex-start; 
+              color: #fff;
             }
 
             .phrase {
-              text-align: center;
+              text-align: start; //
+              color: #fff;
+              p{
+                
+              }
             }
           }
+
+          //elementos pares
+        
         }
       }
     }
@@ -221,10 +248,9 @@ export const Services = styled.section`
       }
     }
     .block:nth-child(2) {
-      padding-top: 55px;
       .custom-container {
         justify-content: center;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
       }
     }
   }

@@ -8,21 +8,18 @@ export const Header = styled.header`
 
   .menu-mobile {
     display: none;
+    position: absolute;
     justify-content: flex-end;
-    margin-right: 20px;
-    margin-top: 30px;
-   
-
-    .block-bar > div {
-      box-shadow: 0px 0px 0px 1px rgba(35, 161, 235, 0.44);
-    }
+    margin-right: 15px;
+    margin-top: 20px;
+    right: 0;
 
     .menu-box {
       background-color: #fff;
 
       .top-box {
         height: 80%;
-        padding-right:0;
+        padding-right: 0;
         nav {
           margin-top: 7vh;
 
@@ -34,17 +31,17 @@ export const Header = styled.header`
 
         button {
           position: absolute;
-          right:50px;
+          right: 50px;
           min-width: 20px !important;
           margin-right: -15px;
 
-          svg{
+          svg {
             fill: ${(props) => props.theme.lightBlue};
           }
         }
       }
-      
-      .buiLaK {
+
+      div:nth-child(2) {
         border-color: ${(props) => props.theme.lightBlue2};
       }
 
@@ -54,11 +51,16 @@ export const Header = styled.header`
           gap: 25px;
 
           a {
+            width:30px;
+              height:30px;
             background-color: ${(props) => props.theme.lightBlue};
 
             svg {
+              width:18px;
+              height:18px;
+
               path {
-                fill: ${(props) => props.theme.darkBlue};
+                fill: #fff;
               }
             }
           }
@@ -145,12 +147,12 @@ export const Header = styled.header`
           }
         }
 
-        .wpp,
+        /* .wpp,
         .insta {
           &::after {
             display: none;
           }
-        }
+        } */
 
         .wpp {
           padding: 10px 23px;
@@ -186,7 +188,7 @@ export const Header = styled.header`
       .content-right {
         margin-right: -0.8vw;
         height: 5.5vw;
-      
+
         &:after {
           height: 5.5vw;
         }
@@ -196,7 +198,7 @@ export const Header = styled.header`
   @media only screen and (max-width: 1175px) {
     .container {
       .content-left {
-        left:0.8vw;
+        left: 0.8vw;
         .box-logo {
           height: 8vw;
         }
@@ -230,24 +232,16 @@ export const Header = styled.header`
   }
   @media only screen and (max-width: 1023px) {
     .menu-mobile {
-      position: absolute;
       display: flex;
-      justify-content: flex-end;
-      margin-right: 15px;
-      margin-top: 20px;
-      display: flex;
-      right: 0;
-
-      .block-bar > div {
-        box-shadow: 0px 0px 0px 1px rgba(35, 161, 235, 0.44);
-      }
     }
+
     .container {
       .content-left {
         &:after {
           height: 90px;
-          width: 115vw;
+          width: 80vw;
         }
+
         .box-logo {
           position: relative;
           height: 90px;
@@ -257,10 +251,12 @@ export const Header = styled.header`
 
       .content-right {
         width: 38%;
+
         &:after {
           right: 0;
           height: 65px;
         }
+
         .menu-links {
           a {
             display: none;
@@ -276,6 +272,7 @@ export const Header = styled.header`
           height: 82px;
           width: 110vw;
         }
+
         .box-logo {
           position: relative;
           height: 82px;
@@ -285,6 +282,7 @@ export const Header = styled.header`
 
       .content-right {
         width: 38%;
+
         &:after {
           right: 0;
           height: 65px;
@@ -294,13 +292,14 @@ export const Header = styled.header`
   }
   @media only screen and (max-width: 420px) {
     .container {
-      .menu-mobile{
+      .menu-mobile {
         nav {
-          text-align:center!important;
-          align-items:center!important;
+          text-align: center !important;
+          align-items: center !important;
           gap: 8px;
         }
       }
+
       .content-left {
         &:after {
           width: 102vw;

@@ -31,7 +31,7 @@ export function Ours({ data }: { data: IOurs }) {
 
   return (
     <Error name="ours">
-      <S.Ours id="ours" className={ sectionPad ? "section-pad" : ""}>
+      <S.Ours id="oursServices" className={ sectionPad ? "section-pad" : ""}>
         <div className="out-container">
           <div className="box-image">
             <NextImage src="/images/ours/ours-truck.png" />

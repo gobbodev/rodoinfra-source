@@ -7,7 +7,7 @@ export const navigationLinks = [
   {
     id: 2,
     link: "Serviços",
-    href: "#services",
+    href: "#oursServices",
   },
   {
     id: 3,

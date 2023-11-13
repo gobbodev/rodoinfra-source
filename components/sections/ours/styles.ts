@@ -64,7 +64,6 @@ export const Ours = styled.section`
     }
   }
   @media only screen and (max-width: 1023px) {
-    padding-bottom: 0; // padding na class
 
     .out-container {
       display: none;
@@ -76,6 +75,9 @@ export const Ours = styled.section`
 
         .info-top {
           h2 {
+            text-align: center;
+          }
+          p{
             text-align: center;
           }
         }

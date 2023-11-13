@@ -60,10 +60,10 @@ export function Footer() {
 
           <div className="footer-bottom">
             <div className="box-social">
-              <Link href={linkedin.url ? linkedin.url : ""}>
+              <Link target="_blank" href={linkedin.url ? linkedin.url : ""}>
                 <LinkedinIcon fill="#fff"/>
               </Link>
-              <Link href={instagram.url ? instagram.url : ""}>
+              <Link target="_blank" href={instagram.url ? instagram.url : ""}>
                 <InstagramIcon fill="#fff"/>
               </Link>
             </div>

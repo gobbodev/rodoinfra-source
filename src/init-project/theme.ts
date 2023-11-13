@@ -11,11 +11,11 @@ export interface ITheme {
 
 export const theme: ITheme = {
   primaryColor: "#006BB3",
-  secondaryColor: "#444444",
+  secondaryColor: "#444",
   lightBlue: "#006BB3",
   lightBlue2: "#008FDB",
   darkBlue: "#00346E",
   black: "#000",
-  lightBlack: "#444444",
+  lightBlack: "#444",
   green: "#34a740"
 };

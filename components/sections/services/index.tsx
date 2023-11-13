@@ -19,7 +19,7 @@ export function Services({ data }: { data: IServices[] }) {
           {list.map((services, index) => {
             return <ServiceItem key={index} services={services} />;
           })}
-        <h2 style={{ display: "none" }}className="font-52 uppercase">catálogo</h2>
+        <h2 style={{ display: "none" }}className="font-52 uppercase">catálogo</h2> 
       </S.Services>
     </Error>
   );

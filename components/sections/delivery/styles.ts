@@ -42,12 +42,35 @@ export const Delivery = styled.section`
   @media only screen and (max-width: 1023px) {
     padding-top: 0 !important;
   }
-  @media only screen and (max-width: 585px) {
-    .sub-container {
-      flex-direction: column;
+  @media only screen and (max-width: 800px) {
+    .container {
+      .sub-container {
+        .item {
+          .box-image {
+            width: 5.6vw;
+          }
+        }
+      }
     }
   }
-
+  @media only screen and (max-width: 585px) {
+    .container {
+      .sub-container {
+        flex-direction: column;
+      }
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .container {
+      .sub-container {
+        .item {
+          .box-image {
+            width: 7.8vw;
+          }
+        }
+      }
+    }
+  }
   @media only screen and (max-width: 660px) {
   }
   @media only screen and (max-width: 550px) {

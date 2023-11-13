@@ -47,20 +47,17 @@ export const GlobalStyle = createGlobalStyle`
 
 .margin-b-30{
   margin-bottom:30px!important;
-  @media only screen and (max-width: 1600px) {
+  @media only screen and (max-width: 1400px) {
     margin-bottom:27px!important;
   }
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: 1024px) {
     margin-bottom:24px!important;
   }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 600px) {
     margin-bottom:20px!important;
   }
-  @media only screen and (max-width: 600px) {
-    margin-bottom:18px!important;
-  }
   @media only screen and (max-width: 400px) {
-    margin-bottom:15px!important;
+    margin-bottom:18px!important;
   }
 }
 
