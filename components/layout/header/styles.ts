@@ -6,6 +6,10 @@ export const Header = styled.header`
   z-index: 999;
   top: 0;
 
+  .wrapper-menu-mobile {
+    display: none;
+  }
+
   .menu-mobile {
     display: none;
     position: absolute;
@@ -66,8 +70,11 @@ export const Header = styled.header`
           }
         }
       }
-
-
+    }
+    .overlay {
+      left: unset;
+      right: 0;
+      top: -20px;
     }
   }
 
@@ -149,9 +156,10 @@ export const Header = styled.header`
           }
         }
 
-        .wpp, .insta{
-          &::after{
-            display:none;
+        .wpp,
+        .insta {
+          &::after {
+            display: none;
           }
         }
 
@@ -239,8 +247,25 @@ export const Header = styled.header`
     }
   }
   @media only screen and (max-width: 1023px) {
+
+    .container{
+      max-width:100vw;
+    }
+    .wrapper-menu-mobile {
+      display: block;
+      position: absolute;
+      width:100vw;
+    }
+
     .menu-mobile {
+      position: relative;
       display: flex;
+      left:0;
+
+      button{
+         position: relative;
+         margin-right:8px;
+      }
     }
 
     .container {
@@ -320,16 +345,12 @@ export const Header = styled.header`
   }
   @media only screen and (max-width: 360px) {
     .container {
-      
-
       .content-left {
         .box-logo {
           width: 190px;
           right: -5vw;
         }
-      
       }
-    
-  }
+    }
   }
 `;
