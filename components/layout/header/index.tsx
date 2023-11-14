@@ -48,11 +48,9 @@ export function Header() {
   ];
 
   useEffect(() => {
-    // Aqui você pode acessar diretamente a .menu-box e manipular conforme necessário
     if (menuRef.current) {
       const menu: HTMLElement | null = menuRef.current;
 
-      // Exemplo: adicionar um evento de clique aos elementos <a> dentro de .menu-box
       const links = menu.getElementsByTagName("a");
       for (let i = 0; i < links.length; i++) {
         links[i].addEventListener("click", handleClick);
@@ -61,7 +59,6 @@ export function Header() {
   }, [menuRef]);
 
   const handleClick = (event) => {
-    // Manipule o clique nos elementos <a> conforme necessário
     const menuBoxElement = document.querySelector(".menu-box");
     const overlayElement: HTMLElement | null =
       document.querySelector(".overlay");
@@ -71,7 +68,9 @@ export function Header() {
     }
 
     if (overlayElement) {
-      overlayElement.style.display = "none"; //a função removeChild é chamada pra remover qd clica no botao do menu, ent se remove o overlay antes da um runtime error
+      overlayElement.style.display = "none"; 
+      // ent essa bomba após clicar em um dos itens dentro de nav no menu fica bugada, pq o proximo clique pra abir o menu chama a função removeChild e só no segundo clique abre o menu
+      // dai n posso remover o overlay, pq a função removeChild tenta remover no primeiro clique o overlay por padrao e causa um runtime error
     }
   };
 
